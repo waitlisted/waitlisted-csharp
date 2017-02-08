@@ -93,6 +93,11 @@ namespace Example
         public void main()
         {
             
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("X-API-Key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("X-API-Key", "Bearer");
+
             var apiInstance = new ReservationApi();
             var body = new ReservationRequest(); // ReservationRequest | Reservation Data
 
@@ -121,7 +126,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[api_key](../README.md#api_key)
 
 ### HTTP request headers
 

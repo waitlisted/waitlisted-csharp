@@ -490,6 +490,12 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
+            // authentication (api_key) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("X-API-Key")))
+            {
+                localVarHeaderParams["X-API-Key"] = Configuration.GetApiKeyWithPrefix("X-API-Key");
+            }
+
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -568,6 +574,11 @@ namespace IO.Swagger.Api
                 localVarPostBody = body; // byte array
             }
 
+            // authentication (api_key) required
+            if (!String.IsNullOrEmpty(Configuration.GetApiKeyWithPrefix("X-API-Key")))
+            {
+                localVarHeaderParams["X-API-Key"] = Configuration.GetApiKeyWithPrefix("X-API-Key");
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
